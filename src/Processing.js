@@ -5032,6 +5032,7 @@
       };
     }());
 
+
     ////////////////////////////////////////////////////////////////////////////
     // Lights
     ////////////////////////////////////////////////////////////////////////////
@@ -11733,6 +11734,11 @@
     DrawingPre.prototype.size = function(aWidth, aHeight, aMode) {
       wireDimensionalFunctions(aMode === PConstants.WEBGL ? "3D" : "2D");
       p.size(aWidth, aHeight, aMode);
+    };
+
+    DrawingPre.prototype.sizeAuto = function(aWidth, aHeight, aMode) {
+      wireDimensionalFunctions(aMode === PConstants.WEBGL ? "3D" : "2D");
+      p.size(window.innerWidth, window.innerHeight, aMode);
     };
 
     DrawingPre.prototype.$init = noop;

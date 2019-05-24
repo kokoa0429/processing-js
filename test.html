@@ -9,7 +9,7 @@
     <h1>Processing.js</h1>
     <script type="text/processing">
       void setup() {
-        size(400,200);
+        sizeAuto();
         textAlign(CENTER, CENTER);
         background(0,0,100);
         fill(255,230,75);
@@ -32,6 +32,6 @@
         println(mouseX, mouseY);
       }
     </script>
-    <canvas></canvas>
+    <canvas style="position: absolute; top:0;left:0;z-index: -1;"></canvas>
   </body>
 </html>

@@ -52,7 +52,7 @@ module.exports = function setupParser(Processing, options) {
       "resetMatrix", "reverse", "rotate", "rotateX", "rotateY", "rotateZ",
       "round", "saturation", "save", "saveFrame", "saveStrings", "scale",
       "screenX", "screenY", "screenZ", "second", "set", "setup", "shape",
-      "shapeMode", "shared", "shearX", "shearY", "shininess", "shorten", "sin", "size", "smooth",
+      "shapeMode", "shared", "shearX", "shearY", "shininess", "shorten", "sin", "size","sizeAuto","smooth",
       "sort", "specular", "sphere", "sphereDetail", "splice", "split",
       "splitTokens", "spotLight", "sq", "sqrt", "status", "str", "stroke",
       "strokeCap", "strokeJoin", "strokeWeight", "subset", "tan", "text",

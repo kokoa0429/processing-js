@@ -160,7 +160,7 @@ module.exports = {
     // Platform IDs
     OTHER:   0,
     WINDOWS: 1,
-    MAXOSX:  2,
+    MACOSX:  2,
     LINUX:   3,
 
     EPSILON: 0.0001,
@@ -7890,7 +7890,7 @@ module.exports = function setupParser(Processing, options) {
       "resetMatrix", "reverse", "rotate", "rotateX", "rotateY", "rotateZ",
       "round", "saturation", "save", "saveFrame", "saveStrings", "scale",
       "screenX", "screenY", "screenZ", "second", "set", "setup", "shape",
-      "shapeMode", "shared", "shearX", "shearY", "shininess", "shorten", "sin", "size", "smooth",
+      "shapeMode", "shared", "shearX", "shearY", "shininess", "shorten", "sin", "size","sizeAuto","smooth",
       "sort", "specular", "sphere", "sphereDetail", "splice", "split",
       "splitTokens", "spotLight", "sq", "sqrt", "status", "str", "stroke",
       "strokeCap", "strokeJoin", "strokeWeight", "subset", "tan", "text",
@@ -14616,6 +14616,7 @@ module.exports = function setupParser(Processing, options) {
       };
     }());
 
+
     ////////////////////////////////////////////////////////////////////////////
     // Lights
     ////////////////////////////////////////////////////////////////////////////
@@ -21317,6 +21318,11 @@ module.exports = function setupParser(Processing, options) {
     DrawingPre.prototype.size = function(aWidth, aHeight, aMode) {
       wireDimensionalFunctions(aMode === PConstants.WEBGL ? "3D" : "2D");
       p.size(aWidth, aHeight, aMode);
+    };
+
+    DrawingPre.prototype.sizeAuto = function(aWidth, aHeight, aMode) {
+      wireDimensionalFunctions(aMode === PConstants.WEBGL ? "3D" : "2D");
+      p.size(window.innerWidth, window.innerHeight, aMode);
     };
 
     DrawingPre.prototype.$init = noop;
